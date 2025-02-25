@@ -1,1 +1,171 @@
-/*nothing here yet*/
+/* Global Color Variables */
+:root {
+    --color-primary: #1F2937 !important;
+    /* Dark Gray-Blue */
+    --color-secondary: #374151 !important;
+    /* Slightly Lighter Gray-Blue */
+    --color-background: #111827 !important;
+    /* Deep Background */
+    --color-text: #E5E7EB !important;
+    /* Light Gray */
+    --color-border: #6B7280 !important;
+    /* Soft Borders */
+    --color-highlight: #9CA3AF !important;
+    /* Mid Gray */
+    --color-button: #6B7280 !important;
+    /* Muted Gray */
+    --color-button-hover: #4B5563 !important;
+    /* Hover Effect */
+}
+
+/* Chat Window General Styling */
+#window-ribbon {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-text) !important;
+    font-family: 'Inter', sans-serif !important;
+    border-radius: 8px !important;
+    padding: 1px !important;
+    box-shadow: 0 2px 14px -5px #0F0F0F !important;
+}
+
+/* Header Styling */
+header,
+header.noaboutme,
+header.siq-header {
+    background-image: none !important;
+    color: var(--color-text) !important;
+    height: 80px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 12px !important;
+}
+
+/* Prevent SalesIQ Themes from Overriding */
+[themeid="9"] header:after,
+[themeid="10"] header:after,
+.buble_bg .msgbx,
+.siqc_edt .wincustom_bg {
+    background: none !important;
+    display: none !important;
+}
+
+/* Chat Body */
+.siq_content {
+    background-color: var(--color-background) !important;
+    border: 0px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+    border-radius: 0px !important;
+    padding: 10px !important;
+}
+
+/* Chat Input Box – Matching Background */
+.msgarea {
+    background-color: var(--color-background) !important;
+    /* Matches outer box */
+    border: 0px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+    padding: 10px !important;
+    border-radius: 6px !important;
+    width: 90% !important;
+    font-size: 14px !important;
+}
+
+/* Placeholder Text */
+.msgarea::placeholder {
+    color: var(--color-highlight) !important;
+}
+
+/* Buttons */
+.siq-send-button,
+.chatbot-button {
+    background-color: var(--color-secondary) !important;
+    border: none !important;
+    color: var(--color-text) !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.siq-send-button:hover,
+.chatbot-button:hover {
+    background-color: var(--color-button-hover) !important;
+}
+
+/* Start Chat Button – Fixed Padding */
+#min_window {
+    background-color: var(--color-button) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    color: var(--color-text) !important;
+    font-weight: bold !important;
+    margin-bottom: 8px !important;
+    /* Push it away from border */
+}
+
+#min_window:hover {
+    background-color: var(--color-button-hover) !important;
+}
+
+/* Close Button */
+.siq-close-icon:before {
+    color: var(--color-text) !important;
+}
+
+/* Options (Sales, Support, etc.) */
+.options span.choose {
+    display: inline-block !important;
+    background-color: var(--color-secondary) !important;
+    color: var(--color-text) !important;
+    padding: 8px 12px !important;
+    margin: 5px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.options span.choose:hover {
+    background-color: var(--color-button-hover) !important;
+}
+
+/* Scrollbar */
+#window-ribbon::-webkit-scrollbar {
+    width: 5px !important;
+}
+
+#window-ribbon::-webkit-scrollbar-thumb {
+    background: var(--color-highlight) !important;
+    border-radius: 10px !important;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+.sqico-send,
+em.sqico-send::before,
+footer {
+    color: #629efc;
+}
+
+.siq-close-icon:before {
+    color: val(--color-secondary);
+}
+
+eader,
+.win_close,
+.emtpg_btn em,
+[themeid="9"] header:after,
+[themeid="10"] header:after,
+.buble_bg .msgbx,
+.siqc_edt .wincustom_bg {
+    background-image: val(--secondary-color);
+    background-image: -webkit-linear-gradient(90deg, #629efc 0%, #629efc 100%) !important;
+    background-image: -moz-linear-gradient(90deg, rgb(0, 145, 255) 0%, rgba(0, 145, 255, 0.9) 100%) !important;
+    background-image: -ms-linear-gradient(90deg, rgb(0, 145, 255) 0%, rgba(0, 145, 255, 0.9) 100%) !important;
+}
